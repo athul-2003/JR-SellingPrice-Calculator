@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="icon" href="./favicon.jpg" type="image/x-icon">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8">
+					<div class="main_title contact_title text-center p-4">
+						<img src="./logo.jpg" alt="logo" style="max-width: 130px; border-radius: 50%;" class="img-fluid">
+						<h2><i class="fa fa-envelope"></i> JR Medicare</h2>
+						<p>Selling Price Estimator</p>
+					</div>
+				</div>
+			</div>
+			
+
+			<div class="row justify-content-center align-items-center box-contact">
+				<div class="col-md-4 container">
+					<form action="" class="form-contact form-left" style="margin-top: 0px !important;">
+						
+						<label for="cost">Individual Cost</label>
+						<input type="number" placeholder="Cost" id="cost">
+						<label for="krs">KRS</label>
+						<input type="number" placeholder="KRS" id="krs">
+						<label for="transport">Transport</label>
+						<input type="number" placeholder="Transport" id="transport">
+						<label for="hamali">Hamali</label>
+						<input type="number" placeholder="Hamali" id="hamali">
+					
+					</form>
+				</div>
+				<div class="col-md-4 container">
+					<form action="" class="form-contact form-right" style="margin-top: 4rem;">
+						<label for="bankInterest">Bank Interest</label>
+						<input type="number" placeholder="bank interest" id="bankInterest">
+						<label for="deliveryCost">Delivery Cost</label>
+						<input type="number" placeholder="delivery cost" id="deliveryCost">
+						<label for="officeExpense">Office Expense</label>
+						<input type="number" placeholder="office expense" id="officeExpense">
+						<label for="miscellaneous">Miscellaneous</label>
+						<input type="number" placeholder="Miscellaneous,default value = 0" id="miscellaneous" >
+
+
+						<div id="marginDiv">
+							<label for="marginVal">Margin Percentage:</label>
+							<input type="number" id="marginVal" name="margin" min="0" max="100" value="25">
+							<span id="marginValue">25</span>%
+						</div>
+
+
+					</form>
+				</div>
+
+				<!-- Hidden div for total amount -->
+				<div id="totalAmount" style="display: none;" class="text-center hiddendiv">
+					<h2>Total Amount: </h2>
+					<p id="totalAmountValue"></p>
+				</div>
+			
+				<!-- Hidden div for selling price -->
+				<div id="margin" style="display: none;" class="text-center">
+					<h2>Selling Price: </h2>
+					<p id="sellingPriceValue"></p>
+				</div>
+
+				<div class="col-12 text-center">
+					<button id="calculateButton" class="primary_btn" onclick="calcMargin()"><span>Calculate</span></button>
+					<button id="clearButton" class="primary_btn pbtn2" onclick="clearValues()"><span>Clear</span></button>
+				</div>
+			</div>
+		</div>
+    </div>
+
+
+
+
+
+
+
+	<script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
